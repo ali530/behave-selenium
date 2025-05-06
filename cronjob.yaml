@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: behave-automation-job
 spec:
-  schedule: "*/10 * * * *"  # scheduling the runs 
+  schedule: "0 * * * *"  # scheduling the runs 
   jobTemplate:
     spec:
       template:
