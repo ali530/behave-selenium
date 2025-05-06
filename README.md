@@ -13,7 +13,7 @@ Using:
 
 Make sure the following tools are installed:
 
-- Docker Desktop
+- Docker Desktop (if running on Kubernetes)
 - Minikube (with Docker driver)
 - kubectl
 - Python 
