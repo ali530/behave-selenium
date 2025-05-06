@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: behave-automation-job
+spec:
+  schedule: "*/10 * * * *"  # scheduling the runs 
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: behave-tests
+              image: behave-sdaia-test  # Docker image name 
+              imagePullPolicy: Never
+
+              volumeMounts:
+                - name: report-volume
+                  mountPath: /app/reports
+          restartPolicy: OnFailure
+          volumes:
+            - name: report-volume
+              hostPath:
+                path: /tmp/reports  
