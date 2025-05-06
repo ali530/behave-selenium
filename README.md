@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 3. Run all tests:
 ```bash
-behave
+behave -f json.pretty -o reports/report.json -f pretty
 ```
 
 4. Run specific tests:
