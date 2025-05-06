@@ -7,7 +7,7 @@ This is a test automation project covering:
 Using:
 - Python + Behave (BDD)
 - Selenium 
-- Xvfb for headless browser testing (to run on )
+- Xvfb for headless browser testing (to run on Kubernetes)
 - Docker + Kubernetes CronJob to run the tests on a schedule
 
 ---
