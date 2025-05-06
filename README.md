@@ -73,43 +73,24 @@ kubectl apply -f cronjob.yaml
 kubectl create job --from=cronjob/behave-automation-job manual-run
 ```
 
-5. Check the logs:
+5. Check the Jobs:
+```bash
+kubectl get cronjob
+```
+
+6. Check the pods:
+```bash
+kubectl get pod
+```
+
+7. Check the logs:
 ```bash
 kubectl logs <pod-name>
 ```
 
-6. Copy the test report from Minikube:
+8. Copy the test report from Minikube:
 ```bash
 minikube cp minikube:/tmp/reports/report.json ./reports/report.json
-```
-```bash
-minikube start --driver=docker
-& minikube -p minikube docker-env | Invoke-Expression
-```
-
-2. Build the Docker image:
-```bash
-docker build -t behave-sdaia-test .
-```
-
-3. Apply the CronJob:
-```bash
-kubectl apply -f cronjob.yaml
-```
-
-4. Run a job manually (optional):
-```bash
-kubectl create job --from=cronjob/behave-automation-job manual-run
-```
-
-5. Check the logs:
-```bash
-kubectl logs <pod-name>
-```
-
-6. Copy the test report from Minikube:
-```bash
-minikube cp minikube:/tmp/reports/report.json ./report.json
 ```
 
 ---
